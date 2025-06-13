@@ -1,0 +1,19 @@
+/include/ "system-conf.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+
+    model = "Zynq Zybo Z7 Development Board";
+    compatible = "digilent,zynq-zybo7", "xlnx,zynq-7000";
+
+
+    chosen{
+        bootargs = "console=ttyPS0,115200 earlyprintk uio_pdrv_genirq.of_id=generic-uio root=/dev/mmcblk0p2 rw rootwait";
+    };
+
+    
+};
+
+&axi_gpio_0 {
+    compatible = "generic-uio";
+};
